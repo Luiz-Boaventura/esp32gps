@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !(public|assets)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [NE,R=302]
+
+RewriteRule ^((?!public/).*)$ public/?url=$1 [QSA,L,NC]
+
+#Caso entre em uma das páginas sem acesso(403), Options -Indexes
+ErrorDocument 403 https://esp32gps.com

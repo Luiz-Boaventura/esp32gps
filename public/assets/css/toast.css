@@ -1,0 +1,14 @@
+.toast.sucesso {
+    background: linear-gradient(179deg, #61A541 -80.71%, #88AC76 146.31%);
+}
+
+.toast.erro {
+    background: linear-gradient(182deg, #D34D4D 33.52%, #ECA0A0 233.37%);
+}
+
+.toast .toast-body {
+    font-family: "gabarito-regular";
+    font-size: 1rem;
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
